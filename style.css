@@ -1,0 +1,136 @@
+/* ================================
+   TAF PREPARAÇÃO — ESTILO DO SITE
+   Edite as cores nas variáveis abaixo.
+================================ */
+:root {
+  --bg: #0c1511;
+  --bg-deep: #070d0a;
+  --panel: #101d16;
+  --panel-light: #15251b;
+  --mint: #60b88d;
+  --mint-bright: #9af0c5;
+  --text: #f4f5ed;
+  --muted: #b7c6bb;
+  --gold: #ffd978;
+  --line: rgba(188, 221, 199, .16);
+  --radius: 22px;
+  --max-width: 1160px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.topbar { min-height: 82px; padding: 0 max(5vw, calc((100vw - var(--max-width)) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 24px; background: rgba(8, 14, 11, .92); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(16px); }
+.brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--mint); color: #07120c; font: 800 26px "Roboto Slab", serif; transform: skew(-5deg); }
+.brand strong { display: block; font-size: 15px; letter-spacing: 1px; line-height: 1.25; }
+.brand-accent { color: var(--mint); }
+.brand small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .5px; }
+.nav { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: 13px; font-weight: 600; }
+.nav a { transition: color .2s ease; }
+.nav a:hover { color: var(--mint-bright); }
+.nav .nav-cta { background: var(--mint); color: #06110b; border-radius: 10px; padding: 11px 17px; }
+.menu-toggle { display: none; border: 1px solid var(--line); color: var(--text); background: var(--panel); border-radius: 9px; padding: 7px 12px; font-size: 22px; }
+.hero { max-width: var(--max-width); margin: auto; padding: 96px 28px 105px; min-height: 590px; display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: 55px; overflow: hidden; }
+.eyebrow { display: flex; align-items: center; gap: 11px; color: var(--mint-bright); font-size: 10px; letter-spacing: 3px; font-weight: 800; }
+.eyebrow-line { width: 24px; height: 1px; background: currentColor; opacity: .65; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, .plan-card h3 { font-family: "Roboto Slab", serif; }
+h1 { font-size: clamp(42px, 5.2vw, 68px); line-height: 1.1; letter-spacing: -2.5px; margin: 24px 0 22px; }
+h1 span, h2 span { color: var(--mint); }
+.hero-content > p { color: var(--muted); max-width: 530px; font-size: 17px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; border: 1px solid transparent; border-radius: 11px; padding: 14px 20px; font: 700 13px "DM Sans", sans-serif; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: var(--mint); color: #07120c; }
+.button-primary:hover, .plan-button:hover { background: var(--mint-bright); }
+.button-outline { border-color: var(--line); color: var(--text); background: rgba(255,255,255,.02); }
+.button-outline:hover { border-color: var(--mint); }
+.hero-note { margin-top: 28px; display: flex; align-items: center; gap: 10px; color: #9caf9f; font-size: 12px; }
+.status-dot { width: 8px; height: 8px; display: inline-block; background: var(--mint); border-radius: 50%; box-shadow: 0 0 12px rgba(124,218,173,.45); flex-shrink: 0; }
+.hero-visual { min-height: 370px; position: relative; display: grid; place-items: center; border: 1px solid rgba(124,218,173,.22); border-radius: 36px; background: radial-gradient(circle at 50% 45%, #1e3828 0, #102016 43%, #0a120d 75%); overflow: hidden; box-shadow: inset 0 0 70px rgba(124,218,173,.035); }
+.hero-visual:before, .hero-visual:after { content: ""; position: absolute; width: 150%; height: 1px; background: rgba(124,218,173,.13); transform: rotate(-36deg); }
+.hero-visual:after { transform: rotate(36deg); }
+.visual-ring { position: absolute; border: 1px solid rgba(124,218,173,.16); border-radius: 50%; aspect-ratio: 1; }
+.ring-one { width: 270px; }
+.ring-two { width: 370px; }
+.visual-number { position: relative; z-index: 1; font: 800 clamp(75px, 10vw, 135px) "Roboto Slab", serif; letter-spacing: -10px; color: rgba(241,255,245,.95); }
+.visual-number span { color: var(--mint); }
+.runner-symbol { position: absolute; z-index: 2; top: 25%; right: 24%; font-size: 45px; color: var(--mint); transform: rotate(-12deg); }
+.visual-label { position: absolute; z-index: 3; font-size: 9px; letter-spacing: 3px; font-weight: 800; color: var(--mint-bright); }
+.label-top { top: 28px; left: 30px; }
+.label-bottom { bottom: 28px; right: 25px; }
+.section-wrap { max-width: var(--max-width); padding: 84px 28px; margin: auto; }
+.benefits { padding-top: 30px; }
+.section-intro { max-width: 690px; text-align: center; margin: 0 auto 42px; }
+.section-intro .eyebrow { justify-content: center; }
+h2 { font-size: clamp(30px, 4vw, 45px); line-height: 1.2; letter-spacing: -1.3px; margin: 17px 0 14px; }
+.section-intro > p { color: var(--muted); max-width: 590px; margin: auto; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit-card { background: linear-gradient(145deg, #132219, #0b130e); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.benefit-icon { width: 43px; height: 43px; display: grid; place-items: center; border: 1px solid rgba(124,218,173,.4); border-radius: 12px; color: var(--mint); font-weight: 800; margin-bottom: 22px; }
+.benefit-card h3 { font-size: 17px; margin-bottom: 9px; }
+.benefit-card p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+.plans-section { background: #101111; border-top: 1px solid rgba(255,255,255,.035); border-bottom: 1px solid rgba(255,255,255,.035); }
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+.plan-card { position: relative; background: #09140e; border: 1px solid rgba(163,215,179,.13); border-radius: 20px; padding: 25px 22px 24px; display: flex; flex-direction: column; min-height: 405px; box-shadow: 0 10px 28px rgba(0,0,0,.16); overflow: hidden; }
+.plan-card:before { content: ""; height: 3px; background: var(--mint); position: absolute; top: 0; left: 22px; right: 22px; border-radius: 0 0 5px 5px; }
+.plan-card.featured { background: linear-gradient(155deg, #102219, #09140e 65%); border-color: rgba(124,218,173,.36); }
+.plan-number { font: 800 35px "Roboto Slab", serif; color: var(--mint); margin-bottom: 10px; }
+.tag { align-self: flex-start; background: var(--mint); color: #06120b; border-radius: 20px; padding: 3px 11px; font-size: 10px; font-weight: 800; letter-spacing: 1.3px; margin-bottom: 16px; }
+.plan-card h3 { font-size: 20px; line-height: 1.3; margin-bottom: 14px; }
+.plan-card > p { font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 16px; flex: 1; }
+.plan-price { border-top: 1px solid var(--line); padding-top: 13px; margin-bottom: 16px; display: flex; flex-direction: column; }
+.plan-price strong { font: 800 27px "Roboto Slab", serif; color: var(--gold); line-height: 1.25; }
+.plan-price span { color: #8f9d92; font-size: 11px; }
+.plan-button { background: var(--mint); color: #06120b; width: 100%; justify-content: space-between; padding: 13px 15px; }
+.price-note { color: #87978b; text-align: center; font-size: 11px; margin: 22px 0 0; }
+.video-section { background: #0a0a0b; }
+.video-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: center; }
+.video-copy h2 { font-size: clamp(34px, 4vw, 49px); }
+.video-copy p { color: var(--muted); max-width: 420px; }
+.text-link { display: inline-flex; gap: 15px; align-items: center; color: var(--mint); font-weight: 800; font-size: 13px; margin-top: 10px; }
+.video-frame { padding: 12px; border: 1px solid var(--line); border-radius: 22px; background: #121414; box-shadow: 0 20px 55px rgba(0,0,0,.28); }
+.video-frame video { display: block; width: 100%; max-height: 520px; aspect-ratio: 16 / 9; object-fit: contain; background: #050606; border-radius: 13px; }
+.video-caption { display: flex; align-items: center; gap: 9px; padding: 13px 6px 2px; font-size: 9px; font-weight: 800; letter-spacing: 2px; color: var(--muted); }
+.contact-section { padding: 75px 28px; background: var(--mint); color: #07120c; }
+.contact-box { max-width: 1104px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.contact-box .eyebrow { color: #153c27; }
+.contact-box h2 { max-width: 620px; font-size: clamp(28px, 3.4vw, 41px); margin-bottom: 10px; }
+.contact-box p { max-width: 620px; color: #214c35; margin-bottom: 0; }
+.button-dark { flex-shrink: 0; background: #08130c; color: white; }
+.button-dark:hover { background: #1a3021; }
+.footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 28px max(5vw, calc((100vw - var(--max-width)) / 2)); background: #070b08; }
+.footer p { margin: 0; color: #819085; font-size: 11px; text-align: center; }
+.back-top { color: var(--mint); font-size: 12px; font-weight: 700; white-space: nowrap; }
+@media (max-width: 850px) {
+  .topbar { padding: 14px 22px; min-height: 72px; flex-wrap: wrap; }
+  .menu-toggle { display: block; }
+  .nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; padding: 5px 0 10px; }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 8px; }
+  .nav .nav-cta { text-align: center; margin-top: 7px; }
+  .hero { grid-template-columns: 1fr; padding: 70px 24px; gap: 38px; }
+  .hero-visual { min-height: 310px; }
+  .benefit-grid, .plans-grid { grid-template-columns: 1fr; max-width: 520px; margin: auto; }
+  .plan-card { min-height: auto; }
+  .video-layout { grid-template-columns: 1fr; gap: 32px; }
+  .video-copy { text-align: center; }
+  .video-copy .eyebrow { justify-content: center; }
+  .video-copy p { margin-left: auto; margin-right: auto; }
+  .contact-box { flex-direction: column; align-items: flex-start; }
+  .footer { flex-wrap: wrap; justify-content: center; text-align: center; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 55px 20px; }
+  h1 { letter-spacing: -1.5px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .button { width: 100%; }
+  .section-wrap { padding: 64px 20px; }
+  .eyebrow { font-size: 9px; letter-spacing: 2px; }
+  .plan-card { padding: 24px 19px; }
+  .contact-section { padding: 55px 20px; }
+  .contact-box .button { width: 100%; }
+  .footer { padding: 28px 20px; }
+}
